@@ -5,7 +5,7 @@
 In today’s tech driven era, the major source of communication has become messaging or SMS. Some of these messages that we receive may be spam and it becomes difficult to distinguish between spam and non-spam messages. In this study, we trained several machine learning models on the multilingual SMS spam data. We go from classical ML models to using pre-trained models for multilingual data. The results show that pre-trained models heavily outperform the classical ML models.
 
 
-## **1.Introduction**
+## **1. Introduction**
 
 In our fast-paced digital world, emails and text messages have become our go-to for staying connected. However, this surge has brought forth a parallel rise in spam-related challenges, necessitating the development of intelligent automated detection systems ([1], [2], [3]). As we hustle through our digital lives, dealing with spam has become a real puzzle. It is not just about irritation, it is about keeping our information and devices safe ([1]). Recent research has honed in on leveraging supervised learning techniques to enhance the efficiency of spam detection, especially in the context of emails ([1], [2]). Beyond the inconvenience, the potential for malicious links and information theft requires the need for advanced techniques to tackle this issue ([2]). However, existing approaches show limitations in feature extraction and selection, particularly when applied with messages in languages beyond English ([2], [4]).
 
@@ -13,7 +13,7 @@ The previous works have proposed novel models that leverage pre-trained Transfor
 
 
 
-## **2.Proposed Methodology**
+## **2. Proposed Methodology**
 
 For detection of spam messages in multi-lingual texts we apply several models and pick the best one based on the performance. The methodology is to use a step-by-step process to solve the problem as described in the following steps:
 
@@ -39,7 +39,7 @@ For detection of spam messages in multi-lingual texts we apply several models an
 
 
 
-## **3.Technical Details**
+## **3. Technical Details**
 
 
 ### 3.1 Dataset
@@ -69,7 +69,7 @@ The dataset is pre-processed to be further utilized for training. The initial st
 • The unwanted column present in the dataset is dropped and the labels column is encoded using LabelEncoder from scikit-learn’s preprocessing library. It converts the categorical labels column to numerical by encoding ham to 0 and spam to 1.
 
 
-## 4.Classical ML Models
+## **4. Classical ML Models**
 
 
 ### 4.1 Further Processing
@@ -125,7 +125,7 @@ Even though the Model 3 has the best accuracy, it has performed the worst in com
 Thus, it can be concluded that the classical ML Models are not sufficient to perform classification on Multi lingual messages.
 
 
-## 5.Pre-Trained Models
+## **5. Pre-Trained Models**
 
 
 As the classical Machine Learning models did not perform well on the multi-lingual data, we switched to the pre-trained models. The details of the working is described below.
@@ -187,7 +187,7 @@ predictions is drawn for all the languages as shown in Figure 5.2.
 From the figure 5.3 it can be observed that SVC has the least (almost 0) False negatives, while Bayes Model has the highest number of false negatives. XGBoost counts for the most number of False Positives. Hence, it can be said that the Support Vector Classifier model performed the best followed by the XGBoost model while the Naive Bayes model performed the least.
 
 
-## 6.Comparison
+## **6. Comparison**
 
 
 It is evident from the work that the pre-trained models performed the best in comparison to the classical models. The count plot of the comparison of the models is as shown in Figure 6. It can clearly be observed from the chart that the Classical ML Models without Pre-trained transformers have performed the worst. The Classical ML Models have high number of False Positives and False Negatives and low count of True Negatives. The Models with pre-trained encoding gave very high accuracies and required training on only one language. With Classical ML Models, all the interested languages data was trained but the accuracies reported are very low.
@@ -214,14 +214,14 @@ It is evident from the work that the pre-trained models performed the best in co
 
 
 
-## 7.Discussion
+## **7. Discussion**
 
 
 The pre-trained machine learning models heavily outperformed the classical machine learning models. This shows that multilingual data cannot be handled in a regular manner and requires effective modelling to give close to accurate results. The best model using the pre-trained DistilUSE encoder is SVC which gave more than 97% accuracy on the individual languages while the mean accuracy of the SVC on all languages is more than 98.5%. It can be concluded from our study that from all the trained models the SVC model with DistilUSE encoder is the most efficient for multilingual spam detection. As a part of future work, the models can be tested on the other languages in the dataset along with training the data on different models.
 
 
 
-## References
+## **References**
 
 [1] Rawat, A., Behera, S., & Rajaram, V. (2022). Email Spam Classification Using Supervised Learning in Different Languages. 2022 International Conference on Computer, Power and Communications (ICCPC), 294–298. doi:10.1109/ICCPC55978.2022.10072054
 
